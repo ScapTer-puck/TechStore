@@ -1,0 +1,128 @@
+/* Общие стили */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f14;
+  color: #ffffff;
+}
+
+/* HEADER */
+.header {
+  background: #14141d;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.logo {
+  color: #6c63ff;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+  background: #1a1a2e;
+}
+
+.hero p {
+  color: #ccc;
+}
+
+/* CATALOG */
+.catalog {
+  padding: 60px 40px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #1f1f2e;
+  padding: 20px;
+  width: 260px;
+  border-radius: 10px;
+}
+
+.price {
+  display: block;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.card button {
+  width: 100%;
+  padding: 10px;
+  background: #6c63ff;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* INFO */
+.info {
+  background: #14141d;
+  padding: 60px 40px;
+}
+
+.info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info li {
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+.footer {
+  background: #0a0a0f;
+  text-align: center;
+  padding: 30px;
+  color: #aaa;
+}
+
+/* Анімація заголовків по тексту */
+h2, h3 {
+  display: inline-block; /* hover тільки на тексті */
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover ефекти */
+h2:hover, h3:hover {
+  transform: translateY(-5px); /* підйом тексту */
+  color: #6c63ff; /* зміна кольору */
+}
+
+/* Анімоване підкреслення для кожного заголовка */
+h2::after, h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+h2:hover::after, h3:hover::after {
+  width: 100%; /* підкреслення анімується по ширині тексту */
+}
+
