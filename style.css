@@ -1,4 +1,4 @@
-/* Загальні стилі */
+/* Общие стили */
 * {
   box-sizing: border-box;
 }
@@ -31,16 +31,9 @@ body {
 
 /* HERO */
 .hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   padding: 90px 20px;
   background: #1a1a2e;
-  text-align: center;
-}
-
-.hero-text {
-  max-width: 500px;
 }
 
 .hero p {
@@ -103,19 +96,21 @@ body {
   color: #aaa;
 }
 
-/* Анімація заголовків */
+/* Анімація заголовків по тексту */
 h2, h3 {
-  display: inline-block;
+  display: inline-block; /* hover тільки на тексті */
   position: relative;
   cursor: pointer;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
+/* Hover ефекти */
 h2:hover, h3:hover {
-  transform: translateY(-5px);
-  color: #6c63ff;
+  transform: translateY(-5px); /* підйом тексту */
+  color: #6c63ff; /* зміна кольору */
 }
 
+/* Анімоване підкреслення для кожного заголовка */
 h2::after, h3::after {
   content: '';
   position: absolute;
@@ -128,5 +123,6 @@ h2::after, h3::after {
 }
 
 h2:hover::after, h3:hover::after {
-  width: 100%;
+  width: 100%; /* підкреслення анімується по ширині тексту */
 }
+
