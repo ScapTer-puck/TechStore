@@ -3,161 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>TechStore</title>
-
-  <style>
-    /* Общие стили */
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f0f14;
-      color: #ffffff;
-    }
-
-    /* HEADER */
-    .header {
-      background: #14141d;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .header a {
-      color: #ffffff;
-      text-decoration: none;
-      margin-left: 20px;
-    }
-
-    .logo {
-      color: #6c63ff;
-    }
-
-    /* HERO */
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 40px;
-      padding: 90px 20px;
-      background: #1a1a2e;
-    }
-
-    .hero-text {
-      text-align: center;
-      max-width: 500px;
-    }
-
-    .hero p {
-      color: #ccc;
-    }
-
-    .hero-phone {
-      width: 180px;
-      animation: float 4s ease-in-out infinite;
-    }
-
-    .hero-phone.right {
-      animation-delay: 2s;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
-      100% { transform: translateY(0); }
-    }
-
-    /* CATALOG */
-    .catalog {
-      padding: 60px 40px;
-    }
-
-    .card {
-      background: #1f1f2e;
-      padding: 20px;
-      width: 260px;
-      border-radius: 10px;
-      display: inline-block;
-      margin-right: 20px;
-    }
-
-    .card img {
-      width: 100%;
-      height: 170px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-
-    .price {
-      display: block;
-      margin: 15px 0;
-      font-weight: bold;
-    }
-
-    .card button {
-      width: 100%;
-      padding: 10px;
-      background: #6c63ff;
-      border: none;
-      color: white;
-      cursor: pointer;
-    }
-
-    /* INFO */
-    .info {
-      background: #14141d;
-      padding: 60px 40px;
-    }
-
-    .info ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .info li {
-      margin-bottom: 10px;
-    }
-
-    /* FOOTER */
-    .footer {
-      background: #0a0a0f;
-      text-align: center;
-      padding: 30px;
-      color: #aaa;
-    }
-
-    /* Анімація заголовків */
-    h2, h3 {
-      display: inline-block;
-      position: relative;
-      cursor: pointer;
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
-
-    h2:hover, h3:hover {
-      transform: translateY(-5px);
-      color: #6c63ff;
-    }
-
-    h2::after, h3::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -3px;
-      width: 0;
-      height: 2px;
-      background: currentColor;
-      transition: width 0.3s ease;
-    }
-
-    h2:hover::after, h3:hover::after {
-      width: 100%;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -171,43 +17,37 @@
   </nav>
 </header>
 
-<!-- HERO з телефонами -->
 <section class="hero">
-  <img src="images/phone-left.png" class="hero-phone" alt="Phone left">
-
   <div class="hero-text">
     <h2>Обирай техніку з розумом</h2>
     <p>Огляди, поради та купівля сучасної техніки</p>
   </div>
-
-  <img src="images/phone-right.png" class="hero-phone right" alt="Phone right">
 </section>
 
 <section id="catalog" class="catalog">
   <h2>Каталог</h2>
 
-  <div class="card">
-    <img src="images/smartphone-z.jpg" alt="SmartPhone Z">
-    <h3>SmartPhone Z</h3>
-    <p>Потужний телефон для щоденних задач</p>
-    <span class="price">22 000 грн</span>
-    <button>Купити</button>
-  </div>
+  <div class="cards">
+    <div class="card">
+      <h3>SmartPhone Z</h3>
+      <p>Потужний телефон для щоденних задач</p>
+      <span class="price">22 000 грн</span>
+      <button>Купити</button>
+    </div>
 
-  <div class="card">
-    <img src="images/notebook-pro.jpg" alt="NoteBook Pro">
-    <h3>NoteBook Pro</h3>
-    <p>Для навчання, роботи та ігор</p>
-    <span class="price">45 000 грн</span>
-    <button>Купити</button>
-  </div>
+    <div class="card">
+      <h3>NoteBook Pro</h3>
+      <p>Для навчання, роботи та ігор</p>
+      <span class="price">45 000 грн</span>
+      <button>Купити</button>
+    </div>
 
-  <div class="card">
-    <img src="images/ultraphone-x.jpg" alt="UltraPhone X">
-    <h3>UltraPhone X</h3>
-    <p>Камера, екран та швидкість</p>
-    <span class="price">30 000 грн</span>
-    <button>Купити</button>
+    <div class="card">
+      <h3>UltraPhone X</h3>
+      <p>Камера, екран та швидкість</p>
+      <span class="price">30 000 грн</span>
+      <button>Купити</button>
+    </div>
   </div>
 </section>
 
